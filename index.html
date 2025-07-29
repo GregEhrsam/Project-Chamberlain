@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorola Solutions: Airspace Security & $100M Growth Initiative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background from second infographic */
+            color: #333; /* Darker text for better contrast */
+        }
+        .container {
+            max-width: 1200px; /* Wider container for more content */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Adjusted max-width for charts */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Default height */
+            max-height: 50vh; /* Responsive height */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px; /* Slightly taller on desktop */
+            }
+        }
+        .kpi-card {
+            background-color: #003f5c; /* Dark blue from second infographic */
+            color: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* Shadow from first infographic */
+            transition: transform 0.3s ease; /* Hover effect from first infographic */
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+        }
+        .kpi-title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+        .kpi-value {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffa600; /* Orange from second infographic */
+        }
+        .kpi-subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        .flow-icon { /* From first infographic */
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        .flowchart-step { /* From second infographic */
+            border: 2px solid #665191; /* Purple from second infographic */
+            background-color: white;
+            color: #003f5c; /* Dark blue from second infographic */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            flex-grow: 1;
+            margin: 0.5rem; /* Added margin for spacing */
+        }
+        .flowchart-arrow { /* From second infographic */
+            color: #665191;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        .flowchart-base { /* From second infographic */
+            background-color: #2f4b7c; /* Royal blue from second infographic */
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        .table-header { /* From second infographic */
+            background-color: #003f5c;
+            color: white;
+        }
+        /* Adjusted table cell padding and font size for better fit */
+        .market-analysis-table td, .market-analysis-table th {
+            padding: 0.5rem 0.75rem; /* Reduced padding */
+            font-size: 0.75rem; /* Slightly smaller font size */
+        }
+        .table-cell-strong { /* From second infographic */
+            font-weight: 700;
+            color: #2f4b7c;
+        }
+        .opportunity-card { /* From second infographic */
+            border-left: 5px solid #ffa600; /* Orange from second infographic */
+            background-color: #ffffff; /* White background */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* Subtle shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Motorola Solutions: Airspace Security & $100M Growth Initiative</h1>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="intro" class="text-center mb-12">
+            <h2 class="text-5xl font-black text-[#00529B] mb-4">Project Nitro: Target $100M Growth by 2026</h2>
+            <p class="text-xl max-w-3xl mx-auto text-gray-600">A strategic initiative to expand Motorola's leadership in the drone, counter-drone, and drone management markets by capitalizing on explosive industry growth and securing critical infrastructure across the nation, powered by AI-driven SaaS including BRINC, Skysafe & Cape.</p>
+        </section>
+
+        <section id="kpis" class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 text-[#00529B]">Key Performance Indicators & Goals</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="kpi-card">
+                    <div class="kpi-title">Our Goal</div>
+                    <div class="kpi-value">$100M</div>
+                    <div class="kpi-subtitle">New Annual Recurring Revenue</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Timeline</div>
+                    <div class="kpi-value">24</div>
+                    <div class="kpi-subtitle">Months</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Target Win Rate</div>
+                    <div class="kpi-value">30%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Deployments</div>
+                    <div class="kpi-value">25+</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market-opportunity" class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-[#00529B]">Public Safety Drone Market Explosion</h3>
+                    <p class="text-gray-600 mb-4">The market for public safety drones is on a steep upward trajectory, driven by government investment and the proven effectiveness of Drones as First Responders (DFR). North America is the dominant force in this expansion.</p>
+                    <div class="chart-container">
+                        <canvas id="publicSafetyMarketChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-[#00529B]">Counter-Drone Market's Exponential Rise</h3>
+                    <p class="text-gray-600 mb-4">Fueled by escalating security threats to critical infrastructure, the counter-drone market is growing at an even faster rate. AI-driven detection and forensic capabilities are becoming essential security layers.</p>
+                    <div class="chart-container">
+                        <canvas id="counterDroneMarketChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="growth-drivers" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-3xl font-bold text-center mb-8 text-[#00529B]">Key Growth Drivers & Strategic Focus</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-5xl mb-2 text-[#FF6F61]">🚁</div>
+                    <h4 class="text-xl font-bold mb-2">DFR Program Adoption</h4>
+                    <p class="text-gray-600">Leveraging BRINC drones to equip police, fire, and EMS with faster, safer, and more cost-effective aerial support compared to traditional assets.</p>
+                </div>
+                <div>
+                    <div class="text-5xl mb-2 text-[#FF6F61]">🛡️</div>
+                    <h4 class="text-xl font-bold mb-2">Critical Infrastructure Protection</h4>
+                    <p class="text-gray-600">Deploying SkySafe to secure airports, prisons, stadiums, and ports from the growing threat of unauthorized drone incursions and illicit activities.</p>
+                </div>
+                <div>
+                    <div class="text-5xl mb-2 text-[#FF6F61]">📋</div>
+                    <h4 class="text-xl font-bold mb-2">Regulatory Compliance</h4>
+                    <p class="text-gray-600">Utilizing CAPE drone management software to help agencies navigate complex FAA and state laws, ensuring transparent and legally compliant operations.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="target-markets" class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 text-[#00529B]">Target Market Breakdown: High-Potential Segments</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-3">👮</div>
+                    <h4 class="text-xl font-bold mb-2">Public Safety</h4>
+                    <p class="text-gray-600">Police, Fire, and EMS agencies seeking DFR solutions for rapid response and enhanced situational awareness.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-3">🏢</div>
+                    <h4 class="text-xl font-bold mb-2">Corrections</h4>
+                    <p class="text-gray-600">State and county facilities needing to prevent contraband delivery and unauthorized surveillance.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-3">✈️</div>
+                    <h4 class="text-xl font-bold mb-2">Aviation</h4>
+                    <p class="text-gray-600">Major airports requiring robust detection to prevent flight disruptions and ensure passenger safety.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                    <div class="text-4xl mb-3">🏟️</div>
+                    <h4 class="text-xl font-bold mb-2">Stadiums & Venues</h4>
+                    <p class="text-gray-600">Protecting large public gatherings by enforcing "No Drone Zones" during high-profile events.</p>
+                </div>
+            </div>
+        </section>
+            
+        <section id="opportunity-distribution" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-3xl font-bold text-center mb-2 text-[#00529B]">Geographic Opportunity Distribution by Threat/Need Level</h3>
+            <p class="text-center text-gray-600 mb-6">Analysis of 18 key U.S. markets reveals a significant number of high-potential opportunities across all target segments. Each city presents a unique blend of needs for drone, counter-drone, and management solutions.</p>
+            <div class="chart-container h-[500px] max-h-[600px]">
+                <canvas id="opportunityChart"></canvas>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-12">
+            <h2 class="text-2xl font-bold text-[#003f5c] mb-4 text-center">Market Opportunity Ranking by Potential ARR</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">This chart ranks the 18 target markets by their estimated potential for new Annual Recurring Revenue, based on a midpoint of 1-3% of their public safety budgets. State of Georgia and Chicago represent our largest opportunities, with significant potential for advanced AI/SaaS solutions including aerial intelligence.</p>
+            <div class="chart-container">
+                <canvas id="marketRankingChart"></canvas>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-12">
+            <h2 class="text-2xl font-bold text-[#003f5c] mb-6 text-center">Market Analysis Grid</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 market-analysis-table">
+                    <thead class="table-header">
+                        <tr>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider">Market Name</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider">Current Business Summary</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider">FY25/26 PS Budget (or Proxy)</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider">Potential ARR (Midpoint of 1-3% TAM)</th>
+                            <th scope="col" class="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider">Key AI/SaaS Opportunities (incl. BRINC/SkySafe)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">State of Georgia</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Presence through Premier Avigilon & Motorola Two-Way Radio Dealers offering radios, systems, and maintenance contracts.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$2.6B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$52M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Proactive AI Enablement Strategy, AI Advisory Council, explicit budget for security tech in state prisons. Strong potential for drone-based security solutions (BRINC/SkySafe) in correctional facilities and large state properties.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Chicago</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Headquarters in Chicago. Numerous existing contracts with City of Chicago (OEMC, Dept. of Aviation) for 2-way comms, repair, camera infra, radio equipment, dispatch systems.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$2.5B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$50M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Home market advantage with deep existing relationships. Smart Streets Pilot Program using camera tech and support for smart grid tech. Significant opportunity for drone integration (BRINC) in public safety response and airport security.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">San Francisco</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">"Prisons" listed as key focus area within Safety & Security Ecosystem.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$2B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$40M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">High per-capita spending and broad technology initiatives. City's "values shape technology" approach requires ethical use messaging, making BRINC's responsible drone use and SkySafe's airspace management highly relevant.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Houston</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">HCI is leading Motorola Solutions Channel Partner. Offers radios, Avigilon portfolio (access control, video security, smart sensors, body-worn cameras, AI-enabled video analytics). Statewide DIR contract in Texas.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$1.75B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$35M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Existing use of AI for predictive analysis and focus on data-driven decision-making. Strong channel partner facilitates rapid expansion, including for drone-based intelligence and counter-drone solutions (SkySafe).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Dallas</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Manufacturing facility in Richardson, TX, for Video Security & Analytics. HCI is a channel partner. Statewide DIR contract.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$1.75B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$35M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Explicit plans for a CAD & RMS Universal Replacement and a Real Time Crime Center ($20.4M). Local manufacturing presence strengthens video security offerings, creating a natural fit for integrating drone video feeds (BRINC) and airspace security (SkySafe).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Miami</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Corporate office in Plantation, FL. $165M, 10-year contract with Miami-Dade County for APX NEXT™ radios, including new radio sites and maintenance.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$1.55B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$31M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Recent large radio contract indicates appetite for advanced, connected comms, providing pathway for AI-driven SaaS leveraging new radio systems. Strong potential for drone applications (BRINC) in port security and hurricane response.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">San Diego</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Maintenance and support for NetRMS interface with City of San Diego.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$1.25B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$25M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">County-level commitment to AI modernization. Specific needs include AI-powered wildfire detection cameras and real-time monitoring for juvenile detention, ideal for drone-based surveillance (BRINC) and airspace management (SkySafe).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Phoenix</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Presence through Creative Communications Sales & Rentals Inc. for radio comms equipment.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$1B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$20M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Focus on reducing emergency response times and using AI for community engagement. Opportunities for drone integration (BRINC) in search and rescue, and for SkySafe in protecting critical infrastructure.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">San Antonio</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">$9.6M contract with SAFD for 1,200+ personnel radios. Motorola radios used by most large FDs.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$1B</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$20M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Recent large radio contract provides immediate opportunity for cross-selling AI-driven software. City's Smart Cities Roadmap indicates strategic openness to technology integration, including drone-based public safety (BRINC).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Baltimore</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Office in Linthicum Heights, MD. Wireless Inc. is certified Motorola dealer. Contract with City of Baltimore for public safety comms (renewals through 2028).</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$950M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$19M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Fire Department already adopting AI in 911 center. Police Department faces severe staffing/overtime issues, ripe for AI solutions, including drone support (BRINC) for incident assessment and SkySafe for airspace security.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Seattle</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Day Wireless Systems is a premier Motorola Radio Dealer and Elite Specialist in Seattle. Offers two-way radio, broadband PTT, dispatch voice & CAD, Avigilon portfolio.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$805.39M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$16M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Investment in a Real Time Crime Center ($3.1M in 2025-26) directly aligns with Motorola's CommandCentral and real-time intelligence offerings. Strong potential for integrating drone video feeds (BRINC) and managing airspace (SkySafe).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Boston</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Comtronics Corp. (a BearCom Co.) is a Motorola Two-way Radio Dealer, serving New England since 1990. Offers radios, accessories, infrastructure, installations, repair, maintenance.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$800M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$16M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Ongoing deployment of social media analysis tools by police indicates a need for advanced intelligence and investigation software. Opportunities for drone-based data collection (BRINC) and airspace security (SkySafe) in public events.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Detroit</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Broad presence in US, products available via Sourcewell contracts for public safety (P25 radio infra, dispatch consoles, Avigilon).</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$750M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$15M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">City's use of drones and AI for building efficiency. Past legal challenges regarding facial recognition highlight need for Motorola's "responsible AI" and BRINC's ethical drone deployment.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Honolulu</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">BearCom is the world's largest Motorola Partner, offering two-way radios for sale/rent. Products available through City & County purchasing system.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$657.2M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$13M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Staffing shortages in public safety agencies make AI-driven efficiency solutions appealing. Motorola's workflow automation and real-time intelligence can address challenges, with potential for drone support (BRINC) in hard-to-reach areas.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Charlotte</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Two listed addresses in Charlotte. Offers two-way radio solutions, software & applications, video security & analytics, public safety LTE & LMR, managed services. Federal contracts for cyber support and emergency response.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$650M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$13M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Budget focus on "Safe Communities" and state-level initiatives to expand body camera use align with Motorola's video security and evidence management solutions. Opportunities for drone-based surveillance (BRINC) and counter-drone (SkySafe) in public spaces.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Las Vegas</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">$26M contract with Las Vegas METRO for ASTRO®25 digital radio system, APX™ radios, upgraded dispatch equipment. McIntosh Comm. offers MOTOTRBO solutions.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$650M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$13M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Recent large radio contract provides significant installed base for cross-selling AI-driven dispatch and command center software. City's $500M smart city investment opens doors for broader AI applications, including extensive drone use (BRINC) for public safety and event security, and SkySafe for airspace protection.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Memphis</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">ICI Wireless & Railcom are Motorola dealers. Offers two-way radio, broadband PTT, dispatch, security solutions (access control, body-worn cameras, LPR, smart sensors, weapons detection), and software.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$650M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$13M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Recent investment in an AI-powered Downtown Command Center and ongoing commitment to expanding camera networks and upgrading RTCC infrastructure. Direct opportunity for integrating drone intelligence (BRINC) and counter-drone solutions (SkySafe) for public space security.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Louisville</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">RCS Communications is Motorola's largest dealer in KY/IN. Offers two-way radio, wireless comms, video surveillance, Avtec IP dispatch consoles. Platinum Channel Partner.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$400M</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$8M</td>
+                            <td class="px-3 py-2 text-sm text-gray-500">Investment in "Drone as First Responder" (DFR) program with BRINC drones indicates strong adoption of cutting-edge public safety technology. This provides a direct pathway for Motorola to offer integrated AI-driven video analytics, real-time intelligence, and dispatch integration solutions, leveraging BRINC's capabilities.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Removed "Sizing the Prize" and "Top 3 Critical Security Needs in Cities" sections -->
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#d45087] mb-4 text-center">Top 5 Levers for Success (Controllable)</h2>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li><span class="font-semibold">Sales Team Enablement for SaaS & Aerial Intelligence:</span> Aggressively train enterprise sales teams to sell the full "Safety Reimagined" portfolio, with a strong emphasis on AI-driven SaaS, including BRINC drones and SkySafe airspace management solutions.</li>
+                    <li><span class="font-semibold">Channel Partner Incentives for SaaS Growth:</span> Create compelling new ARR-based incentive programs for our key partners to drive cloud, subscription, and aerial intelligence sales.</li>
+                    <li><span class="font-semibold">Integrated Product Bundles with Aerial Solutions:</span> Develop easy-to-sell, high-value bundles (e.g., "Rapid Response Drone Kit" or "Airspace Security Package") that combine hardware, AI-driven software, and services, including BRINC and SkySafe.</li>
+                    <li><span class="font-semibold">Targeted Marketing Campaigns Highlighting Aerial Capabilities:</span> Launch vertical-specific marketing campaigns that speak directly to the pain points of our top opportunity areas (Airports, Venues, Prisons), showcasing the unique value of BRINC and SkySafe.</li>
+                    <li><span class="font-semibold">Streamline Deployment & Onboarding for Advanced Solutions:</span> Simplify the customer experience for cloud products and aerial intelligence solutions to accelerate time-to-value and increase customer satisfaction, ensuring seamless integration into existing workflows.</li>
+                </ol>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#f95d6a] mb-4 text-center">Primary Obstacles to Success</h2>
+                   <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li><span class="font-semibold">Regulatory & Public Perception Challenges for Drones:</span> Navigating complex FAA regulations, local ordinances, and public privacy concerns related to drone operations and aerial surveillance.</li>
+                        <li><span class="font-semibold">Integration Complexities with Legacy Systems:</span> Ensuring seamless integration of drone data, counter-drone systems, and AI-driven SaaS into existing, often outdated, public safety and enterprise infrastructure.</li>
+                        <li><span class="font-semibold">Customer Inertia & Budgetary Shifts:</span> Convincing customers to move from a capital expenditure (CapEx) model for hardware to an operating expense (OpEx) subscription model for SaaS and drone-as-a-service, requiring a shift in mindset and procurement processes.</li>
+                        <li><span class="font-semibold">Competition from Niche Specialists & Large Tech:</span> Facing strong competition from specialized drone manufacturers, counter-drone companies, and broader SaaS vendors in security.</li>
+                        <li><span class="font-semibold">AI & Aerial Literacy within Customer Organizations:</span> Addressing the need for training and expertise among public safety personnel to effectively operate, manage, and utilize advanced AI and drone technologies like BRINC and SkySafe.</li>
+                   </ul>
+            </div>
+        </section>
+
+        <section id="team-profile" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-3xl font-bold text-center mb-8 text-[#00529B]">Driving the Initiative: Why Greg is the Ideal Leader</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-[#00A1E4] mb-2">Sales Leadership: Greg Ehrsam</h4>
+                    <p class="text-lg font-semibold text-gray-700">Sales Leader, Drone & Counter-Drone Initiative</p>
+                    <p class="text-gray-600 mt-2">Reporting directly to **Jim Nelson, TVP of Sales**, Greg will spearhead the strategic execution and sales performance for the $100M growth target. Responsible for market penetration, team development, and key account management.</p>
+                    <h4 class="text-2xl font-bold text-[#00A1E4] mt-6 mb-2">Unique Qualifications:</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><span class="font-semibold">Internal Team Bridge:</span> Proven ability to engage local teams and bridge gaps between FAST, SPT, Specialists, MR, and sales leadership, ensuring seamless activation.</li>
+                        <li><span class="font-semibold">Deep Market Understanding:</span> Leverages Motorola's existing strong presence and understanding of public safety, corrections, aviation, and stadium/venue customers.</li>
+                        <li><span class="font-semibold">Regulatory Expertise:</span> 20 years of contracting experience in local, state, and federal spaces, crucial for navigating complex and evolving drone/counter-drone regulations.</li>
+                        <li><span class="font-semibold">Results-Oriented:</span> Directly accountable for achieving the $100M Incremental ARR and 30% Win Rate, with initial favorable results already demonstrated with FAST and SPT sellers.</li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-[#00A1E4] mb-2">Supporting Functions</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>
+                            <span class="font-semibold">Marketing & Brand Compliance Specialist:</span> Responsible for transforming strategic documents and sales materials into Motorola brand-compliant assets, ensuring consistent messaging and visual identity across all external communications.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Legal, QA, & Product Liaison:</span> A critical role to authenticate all factual claims, ensure legal compliance of solutions and sales practices, and provide deep product expertise to address complex client queries and integrate market feedback into product development.
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">This lean, specialized team will ensure agility, accuracy, and brand integrity as we drive this significant growth initiative.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>&copy; 2025 Motorola Solutions, Inc. All rights reserved.</p>
+        <p class="text-xs text-gray-400 mt-2">This infographic is for informational purposes only. Data sourced from the "Strategic Growth Plan: Achieving $100M" report. All visualizations are based on market analysis and strategic targets.</p>
+    </footer>
+
+    <script>
+        // Consolidated Color Palette
+        const colors = {
+            primary: '#00529B', // Deep blue
+            secondary: '#00A1E4', // Lighter blue
+            accent: '#86C543', // Green
+            highlight: '#FF6F61', // Red-orange
+            darkBlue: '#003f5c', // For text/headers (from second infographic)
+            royalBlue: '#2f4b7c', // For charts/elements (from second infographic)
+            purple: '#665191', // From second infographic
+            magenta: '#a05195', // From second infographic
+            pink: '#d45087', // From second infographic
+            coral: '#f95d6a', // From second infographic
+            orange: '#ff7c43', // From second infographic
+            yellow: '#ffa600', // For market share (from second infographic)
+            backgroundLightBlue: 'rgba(0, 161, 228, 0.2)',
+            backgroundLightGreen: 'rgba(134, 197, 67, 0.2)',
+        };
+
+        // Improved wrapLabels function from the second infographic
+        const wrapLabels = (label, maxWidth = 16) => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+        
+        // Consolidated Tooltip Callback
+        const chartTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        // Chart 1: Public Safety Drone Market Growth
+        const publicSafetyMarketCtx = document.getElementById('publicSafetyMarketChart').getContext('2d');
+        new Chart(publicSafetyMarketCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Market Value 2022', 'Projected Value 2032'],
+                datasets: [{
+                    label: 'Market Value in Billions USD',
+                    data: [1.1, 3.7],
+                    backgroundColor: [colors.primary, colors.secondary],
+                    borderColor: [colors.primary, colors.secondary],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartTooltipCallback,
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Value (in Billions USD)'
+                        }
+                    }
+                },
+                plugins: {
+                    ...chartTooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Public Safety Drone Market Growth (CAGR: 13.1%)',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Counter-Drone Market Growth
+        const counterDroneMarketCtx = document.getElementById('counterDroneMarketChart').getContext('2d');
+        new Chart(counterDroneMarketCtx, {
+            type: 'line',
+            data: {
+                labels: ['2024', '2034'],
+                datasets: [{
+                    label: 'Market Value in Billions USD',
+                    data: [2.61, 30.6],
+                    backgroundColor: colors.backgroundLightBlue,
+                    borderColor: colors.secondary,
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...chartTooltipCallback,
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Value (in Billions USD)'
+                        }
+                    }
+                },
+                plugins: {
+                    ...chartTooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Counter-Drone Market Growth (CAGR: 27.9%)',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Geographic Opportunity Distribution (from first infographic)
+        const opportunityCtx = document.getElementById('opportunityChart').getContext('2d');
+        const originalLabels = [
+            'Georgia Dept of Corrections', 'Hartsfield-Jackson Airport', 'Chicago O\'Hare Airport', 'Logan Intl Airport', 
+            'Charlotte Douglas Airport', 'Miami Intl Airport', 'Lumen Field (Seattle)', 'Fenway Park (Boston)', 
+            'CMPD DFR Program', 'Boston PD DFR Program', 'Montgomery County DFR', 'Florida Dept of Corrections'
+        ];
+        
+        new Chart(opportunityCtx, {
+            type: 'bar',
+            data: {
+                labels: originalLabels.map(label => wrapLabels(label, 20)), // Use the improved wrapLabels
+                datasets: [{
+                    label: 'High-Value Opportunities',
+                    data: [95, 92, 90, 88, 85, 84, 82, 80, 78, 77, 75, 72],
+                    backgroundColor: [
+                        colors.primary, colors.secondary, colors.secondary, colors.secondary,
+                        colors.secondary, colors.secondary, colors.highlight, colors.highlight,
+                        colors.accent, colors.accent, colors.accent, colors.primary
+                    ],
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                ...chartTooltipCallback,
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Opportunity Score (Composite)'
+                        }
+                    }
+                },
+                plugins: {
+                    ...chartTooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Top Identified Opportunities by Threat/Need Level',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Market Opportunity Ranking by Potential ARR (from second infographic)
+        const renderMarketRankingChart = () => {
+            const ctx = document.getElementById('marketRankingChart').getContext('2d');
+            const marketData = [
+                { name: 'State of Georgia', arr: 52 },
+                { name: 'Chicago', arr: 50 },
+                { name: 'San Francisco', arr: 40 },
+                { name: 'Houston', arr: 35 },
+                { name: 'Dallas', arr: 35 },
+                { name: 'Miami', arr: 31 },
+                { name: 'San Diego', arr: 25 },
+                { name: 'Phoenix', arr: 20 },
+                { name: 'San Antonio', arr: 20 },
+                { name: 'Baltimore', arr: 19 },
+                { name: 'Seattle', arr: 16 },
+                { name: 'Boston', arr: 16 },
+                { name: 'Detroit', arr: 15 },
+                { name: 'Honolulu', arr: 13 },
+                { name: 'Charlotte', arr: 13 },
+                { name: 'Las Vegas', arr: 13 },
+                { name: 'Memphis', arr: 13 },
+                { name: 'Louisville', arr: 8 }
+            ].sort((a, b) => b.arr - a.arr); // Sort by ARR descending
+
+            const rawLabels = marketData.map(m => m.name);
+            const chartData = marketData.map(m => m.arr);
+            
+            const processedLabels = rawLabels.map(label => wrapLabels(label, 16));
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: processedLabels,
+                    datasets: [{
+                        label: 'Potential ARR ($M)',
+                        data: chartData,
+                        backgroundColor: [
+                            colors.darkBlue, colors.royalBlue, colors.purple, colors.magenta,
+                            colors.pink, colors.coral, colors.orange, colors.darkBlue,
+                            colors.royalBlue, colors.purple, colors.magenta, colors.pink,
+                            colors.coral, colors.orange, colors.darkBlue, colors.royalBlue,
+                            colors.purple, colors.magenta
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Potential ARR in Millions ($)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: chartTooltipCallback.plugins.tooltip
+                    }
+                }
+            });
+        };
+
+        // Chart 5: Market Share Chart (from second infographic)
+        const renderMarketShareChart = () => {
+            const ctx = document.getElementById('marketShareChart').getContext('2d');
+            // Sum of midpoint ARRs for the 18 markets
+            const totalTAM = 434; 
+            const goalARR = 100;
+            const percentageNeeded = ((goalARR / totalTAM) * 100).toFixed(2);
+            
+            const data = {
+                labels: [`Required Market Share (${percentageNeeded}%)`, 'Remaining Total Addressable Market'],
+                datasets: [{
+                    data: [goalARR, totalTAM - goalARR],
+                    backgroundColor: [colors.yellow, colors.darkBlue],
+                    hoverBackgroundColor: [colors.orange, '#002c40'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            };
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: true,
+                            text: `Target: ${percentageNeeded}% of Total Market`
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed * 1000000);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        };
+
+        // Initialize all charts on window load
+        window.onload = function() {
+            renderMarketRankingChart();
+            // Removed renderMarketShareChart() as its section is removed
+        };
+    </script>
+</body>
+</html>
