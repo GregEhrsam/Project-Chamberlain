@@ -163,26 +163,9 @@
             </div>
         </section>
 
-        <section id="market-opportunity" class="mb-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-2xl font-bold mb-4 text-[#00529B]">Public Safety Drone Market Explosion</h3>
-                    <p class="text-gray-600 mb-4">The market for public safety drones is on a steep upward trajectory, driven by government investment and the proven effectiveness of Drones as First Responders (DFR). North America is the dominant force in this expansion.</p>
-                    <div class="chart-container">
-                        <canvas id="publicSafetyMarketChart"></canvas>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-2xl font-bold mb-4 text-[#00529B]">Counter-Drone Market's Exponential Rise</h3>
-                    <p class="text-gray-600 mb-4">Fueled by escalating security threats to critical infrastructure, the counter-drone market is growing at an even faster rate. AI-driven detection and forensic capabilities are becoming essential security layers.</p>
-                    <div class="chart-container">
-                        <canvas id="counterDroneMarketChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Removed "Market Opportunity" section containing "Public Safety Drone Market Explosion" and "Counter-Drone Market's Exponential Rise" charts -->
 
- <section id="growth-drivers" class="mb-12 bg-white rounded-lg shadow-md p-6">
+<section id="growth-drivers" class="mb-12 bg-white rounded-lg shadow-md p-6">
     <h3 class="text-3xl font-bold text-center mb-8 text-[#00529B]">Key Growth Drivers & Strategic Focus</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
@@ -354,7 +337,7 @@
                         </tr>
                         <tr>
                             <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Honolulu</td>
-                            <td class="px-3 py-2 text-sm text-gray-500">BearCom is the world's largest Motorola Partner, offering two-way radios for sale/rent. Products available through City & County purchasing system.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">BearCom is the world's largest Motorola Partner, offering two-way radios for sale/rent. Products available through City & County purchasing system.</td>
                             <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$657.2M</td>
                             <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$13M</td>
                             <td class="px-3 py-2 text-sm text-gray-500">Staffing shortages in public safety agencies make AI-driven efficiency solutions appealing. Motorola's workflow automation and real-time intelligence can address challenges, with potential for drone support (BRINC) in hard-to-reach areas.</td>
@@ -382,7 +365,7 @@
                         </tr>
                         <tr>
                             <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Louisville</td>
-                            <td class="px-3 py-2 text-sm text-gray-500">RCS Communications is Motorola's largest dealer in KY/IN. Offers two-way radio, wireless comms, video surveillance, Avtec IP dispatch consoles. Platinum Channel Partner.</td>
+                            <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">RCS Communications is Motorola's largest dealer in KY/IN. Offers two-way radio, wireless comms, video surveillance, Avtec IP dispatch consoles. Platinum Channel Partner.</td>
                             <td class="px-3 py-2 whitespace-nowrap text-sm text-gray-500">$400M</td>
                             <td class="px-3 py-2 whitespace-nowrap text-sm table-cell-strong">$8M</td>
                             <td class="px-3 py-2 text-sm text-gray-500">Investment in "Drone as First Responder" (DFR) program with BRINC drones indicates strong adoption of cutting-edge public safety technology. This provides a direct pathway for Motorola to offer integrated AI-driven video analytics, real-time intelligence, and dispatch integration solutions, leveraging BRINC's capabilities.</td>
@@ -512,89 +495,8 @@
             }
         };
 
-        // Chart 1: Public Safety Drone Market Growth
-        const publicSafetyMarketCtx = document.getElementById('publicSafetyMarketChart').getContext('2d');
-        new Chart(publicSafetyMarketCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Market Value 2022', 'Projected Value 2032'],
-                datasets: [{
-                    label: 'Market Value in Billions USD',
-                    data: [1.1, 3.7],
-                    backgroundColor: [colors.primary, colors.secondary],
-                    borderColor: [colors.primary, colors.secondary],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                ...chartTooltipCallback,
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Value (in Billions USD)'
-                        }
-                    }
-                },
-                plugins: {
-                    ...chartTooltipCallback.plugins,
-                    legend: {
-                        display: false
-                    },
-                    title: {
-                        display: true,
-                        text: 'Public Safety Drone Market Growth (CAGR: 13.1%)',
-                        font: { size: 16 }
-                    }
-                }
-            }
-        });
-
-        // Chart 2: Counter-Drone Market Growth
-        const counterDroneMarketCtx = document.getElementById('counterDroneMarketChart').getContext('2d');
-        new Chart(counterDroneMarketCtx, {
-            type: 'line',
-            data: {
-                labels: ['2024', '2034'],
-                datasets: [{
-                    label: 'Market Value in Billions USD',
-                    data: [2.61, 30.6],
-                    backgroundColor: colors.backgroundLightBlue,
-                    borderColor: colors.secondary,
-                    borderWidth: 3,
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                ...chartTooltipCallback,
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Value (in Billions USD)'
-                        }
-                    }
-                },
-                plugins: {
-                    ...chartTooltipCallback.plugins,
-                    legend: {
-                        display: false
-                    },
-                    title: {
-                        display: true,
-                        text: 'Counter-Drone Market Growth (CAGR: 27.9%)',
-                        font: { size: 16 }
-                    }
-                }
-            }
-        });
+        // Removed Chart 1: Public Safety Drone Market Growth
+        // Removed Chart 2: Counter-Drone Market Growth
 
         // Chart 3: Geographic Opportunity Distribution (from first infographic)
         const opportunityCtx = document.getElementById('opportunityChart').getContext('2d');
@@ -716,64 +618,12 @@
             });
         };
 
-        // Chart 5: Market Share Chart (from second infographic)
-        const renderMarketShareChart = () => {
-            const ctx = document.getElementById('marketShareChart').getContext('2d');
-            // Sum of midpoint ARRs for the 18 markets
-            const totalTAM = 434; 
-            const goalARR = 100;
-            const percentageNeeded = ((goalARR / totalTAM) * 100).toFixed(2);
-            
-            const data = {
-                labels: [`Required Market Share (${percentageNeeded}%)`, 'Remaining Total Addressable Market'],
-                datasets: [{
-                    data: [goalARR, totalTAM - goalARR],
-                    backgroundColor: [colors.yellow, colors.darkBlue],
-                    hoverBackgroundColor: [colors.orange, '#002c40'],
-                    borderColor: '#ffffff',
-                    borderWidth: 4,
-                }]
-            };
-
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: data,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '70%',
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                        },
-                        title: {
-                            display: true,
-                            text: `Target: ${percentageNeeded}% of Total Market`
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed !== null) {
-                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed * 1000000);
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        };
-
         // Initialize all charts on window load
         window.onload = function() {
             renderMarketRankingChart();
-            // Removed renderMarketShareChart() as its section is removed
+            // The renderMarketShareChart() function and its associated section were removed.
         };
     </script>
 </body>
 </html>
+
